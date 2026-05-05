@@ -22,20 +22,20 @@ export default function ProjectsSection() {
               <div className="group relative pt-4">
                 {/* Arcana number floating outside */}
                 <div className="absolute -top-1 left-2 sm:left-3 z-20 pointer-events-none">
-                  <div className="p5-display text-accent text-6xl leading-none -skew-x-6 drop-shadow-[3px_3px_0_#000]">
+                  <div className="p5-display text-accent text-5xl sm:text-6xl leading-none -skew-x-6 drop-shadow-[3px_3px_0_#000]">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                 </div>
 
                 <div className="p5-panel p5-panel-hover p-0 overflow-hidden h-full flex flex-col">
                   {/* Header bar */}
-                  <div className="bg-accent border-b-2 border-foreground pl-20 sm:pl-24 pr-4 py-2 flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <span className="p5-condensed italic text-white text-xs tracking-[0.25em]">
+                  <div className="bg-accent border-b-2 border-foreground pl-16 sm:pl-24 pr-4 py-2 flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="p5-condensed italic text-white text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] truncate">
                         ARCANA // {arcana[i % arcana.length]}
                       </span>
                     </div>
-                    <span className="p5-condensed italic text-white/80 text-xs tracking-widest flex items-center gap-1.5">
+                    <span className="p5-condensed italic text-white/80 text-[10px] sm:text-xs tracking-widest hidden sm:flex items-center gap-1.5 flex-shrink-0">
                       <Calendar size={12} strokeWidth={3} />
                       {project.date.toUpperCase()}
                     </span>
@@ -44,14 +44,18 @@ export default function ProjectsSection() {
                   {/* Halftone accent strip */}
                   <div className="h-3 p5-halftone opacity-80 border-b-2 border-foreground" />
 
-                  <div className="p-6 flex-1 flex flex-col">
+                  <div className="p-5 sm:p-6 flex-1 flex flex-col">
                     {/* Title block */}
                     <div className="mb-4">
-                      <h3 className="p5-display text-foreground text-3xl sm:text-4xl leading-none -skew-x-6 mb-2">
+                      <h3 className="p5-display text-foreground text-2xl sm:text-3xl md:text-4xl leading-none -skew-x-6 mb-2">
                         {project.title.toUpperCase()}
                       </h3>
                       <p className="p5-condensed italic text-accent text-sm tracking-wider">
                         {"//"} {project.subtitle.toUpperCase()}
+                      </p>
+                      <p className="sm:hidden p5-condensed italic text-foreground/40 text-[10px] tracking-widest mt-1.5 flex items-center gap-1.5">
+                        <Calendar size={11} strokeWidth={3} />
+                        {project.date.toUpperCase()}
                       </p>
                     </div>
 

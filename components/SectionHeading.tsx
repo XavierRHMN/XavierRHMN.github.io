@@ -6,36 +6,36 @@ interface SectionHeadingProps {
 
 export default function SectionHeading({ label, title, number }: SectionHeadingProps) {
   return (
-    <div className="mb-16 relative">
-      <div className="flex items-end gap-4 sm:gap-6">
+    <div className="mb-12 sm:mb-16 relative">
+      <div className="flex items-end gap-3 sm:gap-6">
         {/* Big number */}
         {number && (
-          <div className="relative">
-            <div className="p5-display text-accent text-7xl sm:text-8xl leading-none -skew-x-6 drop-shadow-[4px_4px_0_#000]">
+          <div className="relative flex-shrink-0">
+            <div className="p5-display text-accent text-5xl sm:text-7xl lg:text-8xl leading-none -skew-x-6 drop-shadow-[3px_3px_0_#000] sm:drop-shadow-[4px_4px_0_#000]">
               {number}
             </div>
           </div>
         )}
 
-        <div className="flex-1 pb-2">
+        <div className="flex-1 min-w-0 pb-1 sm:pb-2">
           {/* Red ribbon label */}
-          <div className="inline-block relative mb-3">
+          <div className="inline-block relative mb-2 sm:mb-3">
             <div className="p5-skew bg-accent border-2 border-black px-3 py-1">
               <div className="p5-skew-content">
-                <span className="p5-label text-white">{label}</span>
+                <span className="p5-label text-white text-[10px] sm:text-xs">{label}</span>
               </div>
             </div>
           </div>
 
           {/* Main title */}
-          <h2 className="p5-display text-foreground text-4xl sm:text-5xl lg:text-6xl">
+          <h2 className="p5-display text-foreground text-3xl sm:text-5xl lg:text-6xl">
             <span className="-skew-x-6 inline-block">{title}</span>
           </h2>
         </div>
       </div>
 
       {/* Underline stripes */}
-      <div className="mt-6 h-2 p5-stripes-thin opacity-90" />
+      <div className="mt-4 sm:mt-6 h-2 p5-stripes-thin opacity-90" />
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function HeroSection() {
         transition={{ duration: 1.5, ease: [0.4, 0, 0.2, 1] }}
         className="absolute inset-0 flex items-center justify-center pointer-events-none"
       >
-        <div className="p5-display text-accent text-[40rem] leading-none -skew-x-6">
+        <div className="p5-display text-accent text-[14rem] sm:text-[24rem] lg:text-[36rem] leading-none -skew-x-6">
           X
         </div>
       </motion.div>
@@ -73,7 +73,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, x: 0, skewX: -6 }}
                 transition={{ duration: 0.7, delay: 0.5, ease: [0.4, 0, 0.2, 1] }}
                 className="p5-display text-foreground leading-[0.85] block"
-                style={{ fontSize: "clamp(4rem, 14vw, 12rem)" }}
+                style={{ fontSize: "clamp(3.25rem, 14vw, 12rem)" }}
               >
                 XAVIER
               </motion.h1>
@@ -83,7 +83,7 @@ export default function HeroSection() {
                 animate={{ opacity: 1, x: 0, skewX: -6 }}
                 transition={{ duration: 0.7, delay: 0.65, ease: [0.4, 0, 0.2, 1] }}
                 className="p5-display leading-[0.85] block"
-                style={{ fontSize: "clamp(4rem, 14vw, 12rem)" }}
+                style={{ fontSize: "clamp(3.25rem, 14vw, 12rem)" }}
               >
                 <span className="text-accent drop-shadow-[6px_6px_0_#000]">
                   RAHMAN

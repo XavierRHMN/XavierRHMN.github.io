@@ -18,14 +18,14 @@ export default function AboutSkillsSection() {
           <div className="relative mb-16">
             <div className="p5-panel p-0 overflow-hidden">
               {/* Top red bar */}
-              <div className="bg-accent border-b-2 border-foreground p-3 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <GraduationCap size={20} className="text-white" strokeWidth={3} />
-                  <span className="p5-condensed italic text-white text-sm tracking-[0.2em]">
+              <div className="bg-accent border-b-2 border-foreground p-3 flex items-center justify-between gap-2">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <GraduationCap size={18} className="text-white flex-shrink-0" strokeWidth={3} />
+                  <span className="p5-condensed italic text-white text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] truncate">
                     PROFILE // EDUCATION
                   </span>
                 </div>
-                <span className="p5-condensed italic text-white/80 text-xs tracking-widest hidden sm:block">
+                <span className="p5-condensed italic text-white/80 text-xs tracking-widest hidden sm:block flex-shrink-0">
                   RANK 3
                 </span>
               </div>
@@ -55,7 +55,6 @@ export default function AboutSkillsSection() {
                     <div className="p5-label text-accent mb-1">CGPA</div>
                     <div className="p5-display text-foreground text-4xl -skew-x-6">
                       {education.cgpa}
-                      <span className="text-foreground/30 text-2xl"> / 4.0</span>
                     </div>
                   </div>
                   <div>

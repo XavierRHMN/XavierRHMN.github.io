@@ -48,7 +48,7 @@ export default function ContactSection() {
             <div className="absolute inset-0 bg-accent translate-x-3 translate-y-3 -rotate-1" />
 
             {/* Main card */}
-            <div className="relative bg-foreground border-4 border-black p-8 sm:p-12">
+            <div className="relative bg-foreground border-4 border-black p-6 sm:p-10 lg:p-12">
               {/* Top accent stripe */}
               <div className="absolute top-3 left-3 right-3 h-1.5 p5-stripes opacity-90" />
 
@@ -62,7 +62,7 @@ export default function ContactSection() {
                       </span>
                     </div>
                   </div>
-                  <h3 className="p5-display text-black text-4xl sm:text-5xl -skew-x-6 leading-none mb-2">
+                  <h3 className="p5-display text-black text-3xl sm:text-4xl md:text-5xl -skew-x-6 leading-none mb-2">
                     SENDER&apos;S NOTICE
                   </h3>
                   <p className="p5-condensed italic text-black/70 text-sm tracking-wider mt-3 max-w-xl mx-auto">
