@@ -1,26 +1,377 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: #0a0a0a;
+  --color-foreground: #f5f5f5;
+  --color-accent: #e60012;
+  --color-accent-dark: #b00010;
+  --color-accent-bright: #ff1a2e;
+  --color-ink: #000000;
+  --color-paper: #f5f0e8;
+  --color-yellow: #ffd700;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-bebas);
+  --font-condensed: var(--font-oswald);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0a0a0a;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0a;
+  color: #f5f5f5;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+::selection {
+  background: #e60012;
+  color: #ffffff;
+}
+
+/* ===========================================
+   PERSONA 5 DESIGN SYSTEM
+   =========================================== */
+
+/* Display type — Bebas Neue, italicized, skewed */
+.p5-display {
+  font-family: var(--font-display), "Bebas Neue", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.p5-condensed {
+  font-family: var(--font-condensed), "Oswald", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+/* Section labels — small kicker text */
+.p5-label {
+  font-family: var(--font-condensed), "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+/* ===== Panels (the angular black-bordered boxes) ===== */
+
+.p5-panel {
+  position: relative;
+  background: #0a0a0a;
+  border: 3px solid #f5f5f5;
+  box-shadow:
+    6px 6px 0 #e60012,
+    6px 6px 0 2px #000;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.p5-panel-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow:
+    9px 9px 0 #e60012,
+    9px 9px 0 2px #000;
+}
+
+.p5-panel-red {
+  position: relative;
+  background: #e60012;
+  border: 3px solid #000;
+  box-shadow:
+    6px 6px 0 #000,
+    inset 0 0 0 1px #ff1a2e;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.p5-panel-red.p5-panel-hover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow:
+    9px 9px 0 #000,
+    inset 0 0 0 1px #ff1a2e;
+}
+
+/* ===== Skewed elements (the iconic P5 angle) ===== */
+
+.p5-skew {
+  transform: skewX(-8deg);
+}
+
+.p5-skew-content {
+  transform: skewX(8deg);
+}
+
+.p5-skew-soft {
+  transform: skewX(-4deg);
+}
+
+.p5-skew-soft-content {
+  transform: skewX(4deg);
+}
+
+/* ===== Diagonal-cut clip paths (banners, ribbons) ===== */
+
+.p5-clip-banner {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 24px) 100%, 0 100%);
+}
+
+.p5-clip-banner-r {
+  clip-path: polygon(24px 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.p5-clip-corner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+}
+
+.p5-clip-tag {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 16px) 50%, 100% 100%, 0 100%);
+}
+
+.p5-clip-card {
+  clip-path: polygon(
+    0 24px,
+    24px 0,
+    100% 0,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0 100%
+  );
+}
+
+/* ===== Buttons / chips ===== */
+
+.p5-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-condensed), "Oswald", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #f5f5f5;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #000;
+  transform: skewX(-8deg);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.p5-button > * {
+  transform: skewX(8deg);
+}
+
+.p5-button:hover {
+  background: #e60012;
+  color: #ffffff;
+  transform: skewX(-8deg) translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.p5-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-condensed), "Oswald", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  background: #f5f5f5;
+  color: #000;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid #000;
+  transform: skewX(-8deg);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.p5-chip > * {
+  display: inline-block;
+  transform: skewX(8deg);
+}
+
+.p5-chip:hover {
+  background: #e60012;
+  color: #ffffff;
+}
+
+.p5-chip-red {
+  background: #e60012;
+  color: #ffffff;
+}
+
+.p5-chip-red:hover {
+  background: #ffffff;
+  color: #e60012;
+}
+
+/* ===== Backgrounds / textures ===== */
+
+/* Halftone dots — scaled for atmosphere */
+.p5-halftone {
+  background-image: radial-gradient(circle, rgba(230, 0, 18, 0.55) 1.2px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.p5-halftone-light {
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+.p5-halftone-fade {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+/* Diagonal red/black stripes (used for accents, dividers) */
+.p5-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #000 0px,
+    #000 14px,
+    #e60012 14px,
+    #e60012 28px
+  );
+}
+
+.p5-stripes-thin {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent 0px,
+    transparent 8px,
+    #e60012 8px,
+    #e60012 10px
+  );
+}
+
+/* Diamond/checker pattern */
+.p5-diamonds {
+  background-image:
+    linear-gradient(45deg, rgba(230, 0, 18, 0.08) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(230, 0, 18, 0.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(230, 0, 18, 0.08) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(230, 0, 18, 0.08) 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+}
+
+/* Speed lines (radial) */
+.p5-speed-lines {
+  background: repeating-conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 1.5deg,
+    rgba(230, 0, 18, 0.4) 1.6deg,
+    rgba(230, 0, 18, 0.4) 1.8deg,
+    transparent 1.9deg,
+    transparent 6deg
+  );
+  -webkit-mask-image: radial-gradient(circle, transparent 30%, black 70%, transparent 100%);
+  mask-image: radial-gradient(circle, transparent 30%, black 70%, transparent 100%);
+}
+
+/* Grain/noise overlay */
+.p5-noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ===== Calling card / paint stroke ===== */
+
+.p5-stroke {
+  position: relative;
+  display: inline-block;
+}
+
+.p5-stroke::before {
+  content: "";
+  position: absolute;
+  inset: -0.1em -0.5em;
+  background: #e60012;
+  z-index: -1;
+  transform: skewX(-8deg) rotate(-1deg);
+  clip-path: polygon(0 10%, 100% 0%, 98% 95%, 2% 100%);
+}
+
+.p5-stroke-black::before {
+  background: #000;
+}
+
+/* ===== Animations ===== */
+
+@keyframes p5-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes p5-shimmer {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
+@keyframes p5-spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes p5-marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.p5-marquee {
+  animation: p5-marquee 30s linear infinite;
+}
+
+/* Slash reveal (used on hover for nav items) */
+.p5-slash {
+  position: relative;
+  overflow: hidden;
+}
+
+.p5-slash::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #e60012;
+  transform: skewX(-20deg) translateX(-110%);
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: -1;
+}
+
+.p5-slash:hover::after {
+  transform: skewX(-20deg) translateX(0);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #e60012;
+  border: 2px solid #0a0a0a;
 }
