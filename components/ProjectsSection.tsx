@@ -21,7 +21,7 @@ export default function ProjectsSection() {
             <ScrollReveal key={project.title} delay={0.1 * (i + 1)}>
               <div className="group relative pt-4">
                 {/* Arcana number floating outside */}
-                <div className="absolute -top-1 left-10 sm:left-12 z-20 pointer-events-none">
+                <div className="absolute top-0 left-5 sm:-top-1 sm:left-7 lg:left-12 z-20 pointer-events-none">
                   <div className="p5-display p5-num-shadow text-white text-5xl sm:text-6xl leading-none -skew-x-6">
                     {String(i + 1).padStart(2, "0")}
                   </div>
