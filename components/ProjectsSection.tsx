@@ -10,7 +10,7 @@ const arcana = ["FOOL", "MAGICIAN", "PRIESTESS"];
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-12">
+    <section id="projects" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <SectionHeading number="02" label="MISSIONS // ACTIVE" title="HEISTS" />
@@ -22,20 +22,18 @@ export default function ProjectsSection() {
               <div className="group relative pt-4">
                 {/* Arcana number floating outside */}
                 <div className="absolute -top-1 left-2 sm:left-3 z-20 pointer-events-none">
-                  <div className="p5-display text-accent text-5xl sm:text-6xl leading-none -skew-x-6 drop-shadow-[3px_3px_0_#000]">
+                  <div className="p5-display p5-num-shadow text-accent text-5xl sm:text-6xl leading-none -skew-x-6">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                 </div>
 
                 <div className="p5-panel p5-panel-hover p-0 overflow-hidden h-full flex flex-col">
                   {/* Header bar */}
-                  <div className="bg-accent border-b-2 border-foreground pl-16 sm:pl-24 pr-4 py-2 flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2 min-w-0">
-                      <span className="p5-condensed italic text-white text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em] truncate">
-                        ARCANA // {arcana[i % arcana.length]}
-                      </span>
-                    </div>
-                    <span className="p5-condensed italic text-white/80 text-[10px] sm:text-xs tracking-widest hidden sm:flex items-center gap-1.5 flex-shrink-0">
+                  <div className="bg-accent border-b-2 border-foreground pl-16 sm:pl-20 lg:pl-24 pr-4 py-2 flex items-center justify-between gap-2">
+                    <span className="block flex-1 min-w-0 truncate p5-condensed italic text-white text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em]">
+                      ARCANA // {arcana[i % arcana.length]}
+                    </span>
+                    <span className="p5-condensed italic text-white/80 text-[10px] sm:text-xs tracking-widest hidden lg:flex items-center gap-1.5 flex-shrink-0">
                       <Calendar size={12} strokeWidth={3} />
                       {project.date.toUpperCase()}
                     </span>
@@ -53,7 +51,7 @@ export default function ProjectsSection() {
                       <p className="p5-condensed italic text-accent text-sm tracking-wider">
                         {"//"} {project.subtitle.toUpperCase()}
                       </p>
-                      <p className="sm:hidden p5-condensed italic text-foreground/40 text-[10px] tracking-widest mt-1.5 flex items-center gap-1.5">
+                      <p className="lg:hidden p5-condensed italic text-foreground/40 text-[10px] tracking-widest mt-1.5 flex items-center gap-1.5">
                         <Calendar size={11} strokeWidth={3} />
                         {project.date.toUpperCase()}
                       </p>

@@ -35,7 +35,7 @@ const contactLinks = [
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-12">
+    <section id="contact" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <SectionHeading number="05" label="TRANSMISSION // OPEN" title="CONTACT" />
@@ -108,7 +108,7 @@ export default function ContactSection() {
                 <div className="mt-6 text-right">
                   <div className="inline-block">
                     <div className="p5-label text-black/50 mb-1 text-right">— SINCERELY,</div>
-                    <div className="p5-display text-accent text-3xl -skew-x-6 leading-none drop-shadow-[3px_3px_0_#000]">
+                    <div className="p5-display p5-num-shadow text-accent text-3xl -skew-x-6 leading-none">
                       XAVIER R.
                     </div>
                   </div>

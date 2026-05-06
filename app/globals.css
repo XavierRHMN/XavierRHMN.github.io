@@ -66,6 +66,23 @@ body {
   text-transform: uppercase;
 }
 
+/* Hard offset text shadow for big numbers — more reliable than drop-shadow on mobile */
+.p5-num-shadow {
+  text-shadow:
+    3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
+.p5-num-shadow-lg {
+  text-shadow:
+    4px 4px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000;
+}
+
 /* ===== Panels (the angular black-bordered boxes) ===== */
 
 .p5-panel {

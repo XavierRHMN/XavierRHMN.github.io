@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function ExtracurricularsSection() {
   return (
-    <section id="activities" className="relative py-24 px-4 sm:px-6 lg:px-12">
+    <section id="activities" className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-12">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <SectionHeading number="04" label="LINKS // SOCIAL" title="CONFIDANTS" />
