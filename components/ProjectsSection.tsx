@@ -6,7 +6,7 @@ import { GithubIcon } from "./Icons";
 import SectionHeading from "./SectionHeading";
 import ScrollReveal from "./ScrollReveal";
 
-const arcana = ["FOOL", "MAGICIAN", "PRIESTESS"];
+const arcana = ["FOOL", "MAGICIAN", "PRIESTESS", "EMPRESS"];
 
 export default function ProjectsSection() {
   return (

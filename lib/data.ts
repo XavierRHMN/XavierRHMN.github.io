@@ -113,6 +113,18 @@ export const projects: Project[] = [
       "Implemented metadata management using TagLibSharp and Last.fm API for scrobbling and personalized recommendations",
     ],
   },
+  {
+    title: "Tempo",
+    subtitle: "Performance Regression Detector",
+    date: "February 2026",
+    techStack: ["C#", ".NET 8", "JavaScript", "GitHub Actions"],
+    github: "https://github.com/XavierRHMN/XHacks2026",
+    highlights: [
+      "Built a CLI performance regression detector for .NET executables that tracks runtime, memory, and GC metrics with statistical analysis (mean, median, std dev, P50/P95/P99 percentiles)",
+      "Implemented linear regression trend detection with configurable thresholds and CI/CD exit codes to catch gradual performance degradation before shipping",
+      "Designed a SOLID, layered architecture with interface-based extensibility for custom reporters (Console, JSON, Markdown, GitHub Actions) and Git-tagged baseline persistence",
+    ],
+  },
 ];
 
 export interface Experience {
