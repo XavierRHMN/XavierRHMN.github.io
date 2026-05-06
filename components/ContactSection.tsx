@@ -108,7 +108,7 @@ export default function ContactSection() {
                 <div className="mt-6 text-right">
                   <div className="inline-block">
                     <div className="p5-label text-black/50 mb-1 text-right">— SINCERELY,</div>
-                    <div className="p5-display p5-num-shadow text-accent text-3xl -skew-x-6 leading-none">
+                    <div className="p5-display text-accent text-3xl -skew-x-6 leading-none" style={{ textShadow: "2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000" }}>
                       XAVIER R.
                     </div>
                   </div>
