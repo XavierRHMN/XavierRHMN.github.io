@@ -19,7 +19,7 @@ export default function SectionHeading({ label, title, number }: SectionHeadingP
 
         <div className="flex-1 min-w-0 pb-1 sm:pb-2">
           {/* Red ribbon label */}
-          <div className="inline-block relative mb-2 sm:mb-3">
+          <div className="inline-block relative mb-2 sm:mb-3 ml-2 sm:ml-3">
             <div className="p5-skew bg-accent border-2 border-black px-3 py-1">
               <div className="p5-skew-content">
                 <span className="p5-label text-white text-[10px] sm:text-xs">{label}</span>
