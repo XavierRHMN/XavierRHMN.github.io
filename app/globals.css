@@ -104,12 +104,33 @@ body {
 }
 
 /* Parallelogram-shaped panel — outer skew (no content counter-skew) */
+/* Skew ramps up with viewport width so wide single-column panels don't clip */
 .p5-panel-skew {
-  transform: skewX(-6deg) !important;
+  transform: skewX(-1.5deg) !important;
 }
 
 .p5-panel-skew.p5-panel-hover:hover {
-  transform: skewX(-6deg) translate(-3px, -3px) !important;
+  transform: skewX(-1.5deg) translate(-3px, -3px) !important;
+}
+
+@media (min-width: 640px) {
+  .p5-panel-skew {
+    transform: skewX(-3deg) !important;
+  }
+
+  .p5-panel-skew.p5-panel-hover:hover {
+    transform: skewX(-3deg) translate(-3px, -3px) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p5-panel-skew {
+    transform: skewX(-6deg) !important;
+  }
+
+  .p5-panel-skew.p5-panel-hover:hover {
+    transform: skewX(-6deg) translate(-3px, -3px) !important;
+  }
 }
 
 .p5-panel-red {
