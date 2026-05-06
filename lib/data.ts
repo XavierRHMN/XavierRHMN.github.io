@@ -18,6 +18,11 @@ export const education = {
     "Data Structures and Algorithms",
     "Systems Programming",
     "Artificial Intelligence",
+    "Programming I",
+    "Programming II",
+    "Discrete Math",
+    "Probability I",
+    "Probability II",
   ],
   awards: ["Dean's Honour Roll (Top 10% of faculty)"],
 };
@@ -30,7 +35,7 @@ export interface SkillCategory {
 export const skills: SkillCategory[] = [
   {
     category: "Languages",
-    skills: ["C++", "C#", "Java", "Python", "JavaScript", "TypeScript", "SQL"],
+    skills: ["C", "C++", "C#", "Java", "Python", "JavaScript", "TypeScript", "SQL"],
   },
   {
     category: "Frameworks & Libraries",
@@ -49,6 +54,7 @@ export const skills: SkillCategory[] = [
       "FFmpeg",
       "PortAudio",
       "WebSockets",
+      "Spring Boot",
       "Bootstrap",
     ],
   },
@@ -58,7 +64,7 @@ export const skills: SkillCategory[] = [
       "Git",
       "Docker",
       "GitHub Actions",
-      "AWS Elastic Beanstalk",
+      "AWS",
       "Visual Studio",
       "IntelliJ Rider",
       "CLion",

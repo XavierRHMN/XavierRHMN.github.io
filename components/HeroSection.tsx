@@ -9,7 +9,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-12 pt-24 pb-12 overflow-hidden"
+      className="relative min-h-screen flex flex-col px-4 sm:px-6 lg:px-12 pt-24 pb-8 overflow-hidden"
     >
       {/* Giant background "X" mark */}
       <motion.div
@@ -23,7 +23,7 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      <div className="relative max-w-7xl w-full">
+      <div className="relative max-w-7xl w-full mx-auto flex-1 flex flex-col justify-center">
         {/* Top decorative strip */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
@@ -216,22 +216,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 0.8 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="p5-condensed italic text-accent text-xs tracking-[0.3em]">
-          SCROLL
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-8 bg-accent"
-        />
-      </motion.div>
     </section>
   );
 }
