@@ -103,6 +103,15 @@ body {
     9px 9px 0 2px #000;
 }
 
+/* Parallelogram-shaped panel — outer skew (no content counter-skew) */
+.p5-panel-skew {
+  transform: skewX(-6deg) !important;
+}
+
+.p5-panel-skew.p5-panel-hover:hover {
+  transform: skewX(-6deg) translate(-3px, -3px) !important;
+}
+
 .p5-panel-red {
   position: relative;
   background: #e60012;

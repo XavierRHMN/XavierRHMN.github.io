@@ -16,7 +16,7 @@ export default function ExperienceSection() {
         <div className="space-y-8">
           {workExperience.map((exp, i) => (
             <ScrollReveal key={exp.company} delay={0.1 * (i + 1)}>
-              <div className="p5-panel p-0 overflow-hidden">
+              <div className="p5-panel p5-panel-skew p-0 overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
                   {/* Left: dates / icon */}
                   <div className="md:col-span-3 bg-accent text-white p-5 border-b-2 md:border-b-0 md:border-r-2 border-foreground flex md:flex-col justify-between md:justify-start gap-3">

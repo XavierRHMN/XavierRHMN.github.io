@@ -16,12 +16,12 @@ export default function AboutSkillsSection() {
         {/* Profile / Education card */}
         <ScrollReveal delay={0.1}>
           <div className="relative mb-16">
-            <div className="p5-panel p-0 overflow-hidden">
+            <div className="p5-panel p5-panel-skew p-0 overflow-hidden">
               {/* Top red bar */}
               <div className="bg-accent border-b-2 border-foreground p-3 flex items-center justify-between gap-2">
                 <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                   <GraduationCap size={18} className="text-white flex-shrink-0" strokeWidth={3} />
-                  <span className="p5-condensed italic text-white text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] truncate">
+                  <span className="p5-condensed italic text-white text-xs sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] truncate pr-2">
                     PROFILE // EDUCATION
                   </span>
                 </div>
@@ -95,7 +95,7 @@ export default function AboutSkillsSection() {
         <div className="space-y-6">
           {skills.map((category, i) => (
             <ScrollReveal key={category.category} delay={0.1 * (i + 1)}>
-              <div className="p5-panel p-0 overflow-hidden">
+              <div className="p5-panel p5-panel-skew p-0 overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-0">
                   {/* Category label - red side panel */}
                   <div className="bg-accent text-white p-4 md:p-5 flex md:flex-col items-center md:items-start justify-between md:justify-center gap-2 border-b-2 md:border-b-0 md:border-r-2 border-foreground">

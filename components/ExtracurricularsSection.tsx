@@ -16,7 +16,7 @@ export default function ExtracurricularsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {extracurriculars.map((activity, i) => (
             <ScrollReveal key={activity.organization} delay={0.1 * (i + 1)}>
-              <div className="p5-panel p5-panel-hover p-0 overflow-hidden h-full">
+              <div className="p5-panel p5-panel-skew p5-panel-hover p-0 overflow-hidden h-full">
                 {/* Header */}
                 <div className="bg-foreground text-black p-3 border-b-2 border-foreground flex items-center justify-between">
                   <div className="flex items-center gap-2">

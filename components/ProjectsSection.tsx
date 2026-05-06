@@ -21,13 +21,13 @@ export default function ProjectsSection() {
             <ScrollReveal key={project.title} delay={0.1 * (i + 1)}>
               <div className="group relative pt-4">
                 {/* Arcana number floating outside */}
-                <div className="absolute -top-1 left-2 sm:left-3 z-20 pointer-events-none">
-                  <div className="p5-display p5-num-shadow text-accent text-5xl sm:text-6xl leading-none -skew-x-6">
+                <div className="absolute -top-1 left-10 sm:left-12 z-20 pointer-events-none">
+                  <div className="p5-display p5-num-shadow text-white text-5xl sm:text-6xl leading-none -skew-x-6">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                 </div>
 
-                <div className="p5-panel p5-panel-hover p-0 overflow-hidden h-full flex flex-col">
+                <div className="p5-panel p5-panel-skew p5-panel-hover p-0 overflow-hidden h-full flex flex-col">
                   {/* Header bar */}
                   <div className="bg-accent border-b-2 border-foreground pl-16 sm:pl-20 lg:pl-24 pr-4 py-2 flex items-center justify-between gap-2">
                     <span className="block flex-1 min-w-0 truncate p5-condensed italic text-white text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em]">
