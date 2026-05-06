@@ -11,7 +11,10 @@ export default function SectionHeading({ label, title, number }: SectionHeadingP
         {/* Big number */}
         {number && (
           <div className="relative flex-shrink-0">
-            <div className="p5-display p5-num-shadow-lg text-accent text-5xl sm:text-7xl lg:text-8xl leading-none -skew-x-6">
+            <div
+              className="p5-display p5-num-shadow-lg text-accent text-5xl sm:text-7xl lg:text-8xl leading-none -skew-x-6"
+              data-text={number}
+            >
               {number}
             </div>
           </div>

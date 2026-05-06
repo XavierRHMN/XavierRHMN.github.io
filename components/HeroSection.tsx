@@ -85,7 +85,7 @@ export default function HeroSection() {
                 className="p5-display leading-[0.85] block"
                 style={{ fontSize: "clamp(3.25rem, 14vw, 12rem)" }}
               >
-                <span className="text-accent p5-num-shadow-lg">
+                <span className="text-accent p5-num-shadow-lg" data-text="RAHMAN">
                   RAHMAN
                 </span>
               </motion.h1>

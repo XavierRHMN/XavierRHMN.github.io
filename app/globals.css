@@ -66,21 +66,30 @@ body {
   text-transform: uppercase;
 }
 
-/* Hard offset text shadow for big numbers — more reliable than drop-shadow on mobile */
-.p5-num-shadow {
-  text-shadow:
-    3px 3px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000;
+/* Pseudo-element shadow for big numbers — survives mobile compositor rasterization
+   where text-shadow on transformed elements (skewX) can be stripped or misrendered. */
+.p5-num-shadow,
+.p5-num-shadow-lg {
+  position: relative;
+  isolation: isolate;
 }
 
-.p5-num-shadow-lg {
-  text-shadow:
-    4px 4px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000;
+.p5-num-shadow::before,
+.p5-num-shadow-lg::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: #000;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.p5-num-shadow::before {
+  transform: translate(3px, 3px);
+}
+
+.p5-num-shadow-lg::before {
+  transform: translate(4px, 4px);
 }
 
 /* ===== Panels (the angular black-bordered boxes) ===== */
